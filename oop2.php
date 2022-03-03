@@ -1,11 +1,16 @@
 <?php
 
+//  Figure->SidesFigure -> Triangle
+//                      -> Square
+//                      -> Rectangle
+//  Figure->Circle
+
 
 abstract class Figure {
   abstract public function area();
 }
 
-class SidesFigure extends Figure {
+abstract class SidesFigure extends Figure {
 
   public $sides = [];
 
@@ -32,15 +37,6 @@ class SidesFigure extends Figure {
   protected function getSidesCount() {
     return 0;
   }
-
-  public function area() {
-    $p = 0;
-    foreach ($this->sides as $side) {
-      $p = $p + $side;
-    }
-
-    return $p;
-  }
 }
 
 class Triangle extends SidesFigure {
@@ -64,6 +60,10 @@ class Square extends SidesFigure {
   protected function getSidesCount() {
     return 4;
   }
+
+  public function area() {
+
+  }
 }
 
 class Rectangle extends SidesFigure {
@@ -76,6 +76,10 @@ class Rectangle extends SidesFigure {
 
   protected function getSidesCount() {
     return 4;
+  }
+
+  public function area() {
+
   }
 }
 
@@ -100,3 +104,10 @@ print PHP_EOL;
 $rect1 = new Rectangle([2, 6]);
 print $rect1->perimeter();
 print PHP_EOL;
+
+
+$figures = [];
+
+foreach ($figures as $figure) {
+  print $figure->area();
+}
