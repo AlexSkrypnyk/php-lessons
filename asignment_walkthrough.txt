@@ -1,0 +1,47 @@
+list.php - functions to show a list of vehicles
+	---------------------------------------------------
+	|id     | name      | Link |
+ 	---------------------------------------------------
+	|1231	|  	c1      | [View](view.php?id=1231)    |
+	|12412	|  	c2      | [View](view.php?id=12412)   |
+	|2352354|   c3      | [View](view.php?id=2352354) |
+	---------------------------------------------------
+
+[Add -> add.php]
+
+
+view.php - functions to show details about a single vehicle
+	prop1: value
+	prop2: value
+	prop3: value
+
+	[ Delete ]
+
+
+add.php - functions to add a new vehicle
+Name:  [      ]
+Color: [      ]
+Year:  [      ]
+
+
+----------
+
+- data structures - classes
+- data storage - flat file (vehicles.txt) + functions to work with it 
+
+data storage -> internal data structure -> output in HTML
+
+
+
+---------
+1. Read data from file
+	a. Function to read from file: parameter is filename, return array of strings
+2. Create data structures: convert data into class instances
+	a. Create classes
+	b. Using return from 1.a, create instances of classes for each array from   
+	   1.a
+3. Create function to render HTML and pass class instance value to that function in a loop
+	a. Create a function to render key/value pairs as a table.
+	b. In a loop, go through all vehicle instances and pass property names and values to the function 3.a
+
+
