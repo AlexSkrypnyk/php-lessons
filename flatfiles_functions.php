@@ -1,6 +1,5 @@
 <?php
-// @usage
-// php flatfiles_read.php
+
 
 function read_from_file($filename) {
 
